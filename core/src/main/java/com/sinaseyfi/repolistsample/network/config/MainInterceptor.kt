@@ -10,7 +10,6 @@ class MainInterceptor @Inject constructor(): Interceptor {
         val request = chain.request()
         val requestBuilder = request.newBuilder()
         requestBuilder.addHeader(BuildConfig.ACCEPT_HEADER_TITLE, BuildConfig.ACCEPT_HEADER_VALUE)
-        requestBuilder.addHeader(BuildConfig.AUTHORIZATION_HEADER_TITLE, BuildConfig.AUTHORIZATION_HEADER_VALUE)
         requestBuilder.addHeader("User-Agent", "Android")
         return chain.proceed(requestBuilder.build())
     }

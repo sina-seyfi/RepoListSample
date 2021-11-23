@@ -28,8 +28,6 @@ object Flavors {
         override val configs: List<Triple<String, String, String>> = listOf(
             Triple("String", "API_BASE_URL", "https://api.github.com/"),
             Triple("String", "ACCEPT_HEADER_TITLE", "Accept"),
-            Triple("String", "AUTHORIZATION_HEADER_TITLE", "Authorization"),
-            Triple("String", "AUTHORIZATION_HEADER_VALUE", "token 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"),
             Triple("String", "ACCEPT_HEADER_VALUE", "application/vnd.github.v3+json"),
 //            Triple("String", "API_KEY", "0e58d5e5-9da9-4137-88c1-c761e610238e"),
 //            Triple("String", "API_KEY_HEADER", "X-CMC_PRO_API_KEY")
