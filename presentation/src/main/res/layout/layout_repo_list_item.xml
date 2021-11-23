@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr"
+    android:layout_marginStart="@dimen/page_horizontal_margin"
+    android:layout_marginEnd="@dimen/page_horizontal_margin"
+    app:cardElevation="@dimen/card_elevation"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardBackgroundColor="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/list_item_horizontal_padding"
+        android:paddingEnd="@dimen/list_item_horizontal_padding"
+        android:paddingTop="@dimen/list_item_vertical_padding"
+        android:paddingBottom="@dimen/list_item_vertical_padding">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/repoNameTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/privateSiv"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            tools:text="Repo List Sample"/>
+        
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/privateSiv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            tools:srcCompat="@drawable/ic_baseline_lock_open_24"
+            tools:tint="@color/green"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/repoNameTv"
+            app:layout_constraintBottom_toBottomOf="@id/repoNameTv"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

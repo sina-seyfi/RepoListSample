@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingStart="@dimen/list_item_horizontal_padding"
+    android:paddingEnd="@dimen/list_item_horizontal_padding"
+    android:paddingTop="@dimen/list_item_vertical_padding"
+    android:paddingBottom="@dimen/list_item_vertical_padding"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/avatarSiv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ic_baseline_face_24"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/repoNameTv"
+        app:layout_constraintBottom_toBottomOf="@id/ownerNameTv"
+        app:shapeAppearance="?shapeAppearanceSmallComponent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/repoNameTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/avatarSiv"
+        app:layout_constraintEnd_toStartOf="@id/privateSiv"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        tools:text="Repo List Sample"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/byTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.MaterialComponents.Subtitle2"
+        app:layout_constraintTop_toTopOf="@id/ownerNameTv"
+        app:layout_constraintBottom_toBottomOf="@id/ownerNameTv"
+        app:layout_constraintStart_toStartOf="@id/repoNameTv"
+        android:textColor="@color/text_color_gray"
+        android:text="@string/by"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ownerNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.MaterialComponents.Subtitle1"
+        app:layout_constraintTop_toBottomOf="@id/repoNameTv"
+        app:layout_constraintStart_toEndOf="@id/byTitleTv"
+        android:layout_marginStart="4dp"
+        android:textColor="@color/purple"
+        tools:text="Sina Seyfi"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/starCountTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.MaterialComponents.Subtitle2"
+        app:layout_constraintTop_toTopOf="@id/ownerNameTv"
+        app:layout_constraintBottom_toBottomOf="@id/ownerNameTv"
+        app:layout_constraintStart_toEndOf="@id/ownerNameTv"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/text_color_gray"
+        tools:text="3"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/starCountIconIv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerInside"
+        android:padding="2dp"
+        app:srcCompat="@drawable/ic_baseline_star_24"
+        app:tint="@color/text_color_gray"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintTop_toTopOf="@id/starCountTv"
+        app:layout_constraintBottom_toBottomOf="@id/starCountTv"
+        app:layout_constraintStart_toEndOf="@id/starCountTv"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/forkCountTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.MaterialComponents.Subtitle2"
+        app:layout_constraintTop_toTopOf="@id/ownerNameTv"
+        app:layout_constraintBottom_toBottomOf="@id/ownerNameTv"
+        app:layout_constraintStart_toEndOf="@id/starCountIconIv"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/text_color_gray"
+        tools:text="3"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/privateSiv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="4dp"
+        android:scaleType="centerInside"
+        tools:srcCompat="@drawable/ic_baseline_lock_open_24"
+        tools:tint="@color/green"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/repoNameTv"
+        app:layout_constraintBottom_toBottomOf="@id/repoNameTv"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/repoHttpUrlTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ownerNameTv"
+        android:layout_marginTop="4dp"
+        android:maxLines="5"
+        android:ellipsize="end"
+        android:textColor="@color/aqua"
+        tools:text="github.com/sina-seyfi/RepoListSample"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/repoDescriptionTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/repoHttpUrlTv"
+        android:layout_marginTop="4dp"
+        android:maxLines="5"
+        android:ellipsize="end"
+        tools:text="This is just an assessment project"/>
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/collaboratorsListRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/repoDescriptionTv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
